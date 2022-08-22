@@ -12,6 +12,7 @@ VIDEO_EXTENSIONS_MAP: Final[dict[str, str]] = {
     ".webm": "*.webm"
 }
 QUALITY_RE_PATTERN: Final[Pattern[str]] = re.compile(r"(\d{3,4}[pi])", re.IGNORECASE)
+FINAL_VIDEO_EXTENSION: str = 'm4v'
 
 
 def get_videos(input_path: str) -> list[Path]:
@@ -30,7 +31,7 @@ def generate_output(videos_path: list[Path], output_dir, preset_path) -> list[st
 
     file: Path
     for file in videos_path:
-        temp_filename = f"{output_dir}/{file.stem}.mp4"
+        temp_filename = f"{output_dir}/{file.stem}.{FINAL_VIDEO_EXTENSION}"
         temp_filename = QUALITY_RE_PATTERN.sub(preset_quality, temp_filename)
 
         output_files_list.append(temp_filename)
