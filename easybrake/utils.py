@@ -43,8 +43,7 @@ def generate_commands(input_videos: list[str], output_videos: list[str], preset_
     handbrake_template: Final[str] = 'handbrakecli --preset-import-file "%PRESET_FILE%" ' \
                                      '--input "%INPUT_FILE%" ' \
                                      '--output "%OUTPUT_FILE%" ' \
-                                     '--all-audio ' \
-                                     '--all-subtitles'
+                                     '--all-audio '
 
     commands = []
     input_videos = sorted(input_videos)
