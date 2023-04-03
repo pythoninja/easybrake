@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "easybrake"
 version = "0.0.2"
-description = "Handbrake on easy"
+description = "CLI wrapper for Handbrake"
 authors = ["pythoninja <pythoninja@users.noreply.github.com>"]
 license = "Unlicense"
 
