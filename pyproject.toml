@@ -6,7 +6,7 @@ authors = ["pythoninja <pythoninja@users.noreply.github.com>"]
 license = "Unlicense"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.11"
 
 [tool.poetry.dev-dependencies]
 
